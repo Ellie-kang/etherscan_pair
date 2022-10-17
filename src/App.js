@@ -66,7 +66,7 @@ function App() {
         잔액 : {balance ? `${balance} ETH` : "계정의 잔고를 확인중입니다"}
       </h3>
       <form onSubmit={getTx}>
-        <button>트랜잭션 정보 확인</button>
+        <h3>트랜잭션 정보 확인</h3>
         <input
           placeholder="조회할 Tx 정보를 기입해 주세요"
           style={{ width: "450px" }}
