@@ -39,7 +39,7 @@ function App() {
 
   const getTx = (e) => {
     e.preventDefault();
-    const sendTx = { txInfo: e.target[1].value };
+    const sendTx = { txInfo: e.target[0].value };
     fetch("http://localhost:8080/txinfo", {
       method: "POST",
       headers: {
@@ -65,8 +65,8 @@ function App() {
       <h3>
         잔액 : {balance ? `${balance} ETH` : "계정의 잔고를 확인중입니다"}
       </h3>
+      <h3>트랜잭션 정보 확인</h3>
       <form onSubmit={getTx}>
-        <h3>트랜잭션 정보 확인</h3>
         <input
           placeholder="조회할 Tx 정보를 기입해 주세요"
           style={{ width: "450px" }}
